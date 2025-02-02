@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>San valentin</title>
+  <link rel="stylesheet" href="css/valentine.css">
+</head>
+<body>
+<!-- Sección 1: Por qué eres la elegida -->
+<section class="hero-section">
+  <div class="content-wrapper">
+    <img src="cat.png" alt="Corazones entrelazados" class="section-img">
+    <div class="text-content">
+      <h2>¿Por qué eres la elegida?</h2>
+      <h3>La razón detrás de esta pregunta...</h3>
+      <p>Querida Samy, te conozco desde hace ya mucho tiempo, sin embargo, estos ultimos años empece a descubrir quien
+        eres, y que puedo decirte, quede fascinado, se que tal vez no estoy ni cerca de conocerte al 100%, pero cada
+        cosa nueva que aprendo de ti, hace que me enamore aún más, despues de:</p>
+      <ul class="inside-jokes">
+        <li>🌙 Los días que nos hablabamos cuando estabamos estudiando</li>
+        <li>📱 Las veces que te escucho hablar de como te fue en tu día</li>
+        <li>😌 El simplemente verte</li>
+      </ul>
+      <p>...Eso y más hacen que yo solo tenga ojos para ti, y que por primera vez quiera pasar este 14 con alguien, y ese alguien eres TÚ.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Sección 2: 5 razones -->
+<section class="reasons-section">
+  <h2>❤️ 10 Razones (de 200) por las que eres la indicada ❤️</h2>
+  <ol class="romantic-list">
+    <li>Todo mi dia mejora solo con ver tu sonrisa</li>
+    <li>Tienes el don de hacerlo todo mejor con tu presencia</li>
+    <li>Eres increiblemente inteligente y responsable</li>
+    <li>Me encanta tu locura, te hace especial para mi</li>
+    <li>Oirte hablar se convirtio en una de mis cosas favoritas</li>
+    <li>Me inspiras a ser mejor persona</li>
+    <li>Cada que te veo me dan ganas de ayudarte en todo lo que necesites</li>
+    <li>Guardo las fotos que me pasas como un tesoro</li>
+    <li>Quiero conocerte, tus gustos, tus miedos, tus pasiones, tus temores, quiero saber cada detalle de ti</li>
+    <li>Quisiera estar contigo para ir a algün lado, al cine, al parque, donde sea, solos, y abrazarte</li>
+    <li>Quiero que cumplas todas tus metas</li>
+    <li>Pienso en ti</li>
+    <li>Me acuerdo de ti</li>
+    <li>Busco asociarte a mi vida en el mañana</li>
+    <li>No se como termine todo esto, pero al final, quiero estar a tu lado</li>
+    <li>Eres la chica más hermosa que conozco</li>
+  </ol>
+  <p class="extra-reason">¡Y podría escribir 194 razones más pero quiero decírtelas en persona cada día!</p>
+</section>
+
+<!-- Sección 3: Señales -->
+<section class="signals-section">
+  <h2>🔮 Señales de que deberías decir que SI 🔮</h2>
+  <h3>Estudios recientes han demostrado que:</h3>
+  <ul class="romantic-list">
+    <li>Si estas leyendo esto, es porque me importas demasiado</li>
+    <li>Si has sonreido al menos una vez, es una señal obvia 👀</li>
+    <li>Si no te gusta comer aceitunas solas, entonces cumplimos con la teoria de la aceituna 🫒 </li>
+    <li>Si aún tienes alguno de mis regalos guardados a pesar de lo mal hechos que estaban</li>
+  </ul>
+</section>
+
+<!-- Sección final: La gran pregunta -->
+<section class="final-question">
+  <div class="hearts-background">
+    <h2>Después de toda esta evidencia...</h2>
+    <div id="valentineQuestion">¿ACEPTAS SER MI SAN VALENTÍN? 💌</div>
+    <button class="answerButton" onclick="location.href='thankyou.html'">¡Sí, me gustaría!</button>
+    <button class="answerButton" id="noButton">Necesito más razones 😉</button>
+  </div>
+</section>
+
+<script>
+  // Mismo script original para el botón "No"
+  document.getElementById('noButton').addEventListener('click', function() {
+    var yesButton = document.querySelector('button[onclick*="thankyou.html"]');
+    var currentFontSize = parseInt(window.getComputedStyle(yesButton).fontSize);
+    yesButton.style.fontSize = currentFontSize + 10 + "px";
+  });
+</script>
+</body>
+</html>

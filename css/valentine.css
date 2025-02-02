@@ -1,0 +1,124 @@
+body {
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(135deg, #fff5e4 0%, #ffe8f0 100%);
+  color: #d14d72;
+  line-height: 1.6;
+}
+
+/* Secciones generales */
+section {
+  padding: 40px 20px;
+  margin: 30px auto;
+  max-width: 1200px;
+  border-bottom: 2px dashed #ffabab;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.section-img {
+  width: 45%;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(209, 77, 114, 0.2);
+}
+
+.text-content {
+  width: 50%;
+  text-align: left;
+}
+
+h2 {
+  color: #d14d72;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(255, 171, 171, 0.3);
+}
+
+/* Listas románticas */
+.romantic-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2em;
+}
+
+.romantic-list li {
+  padding: 15px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.romantic-list li:hover {
+  transform: translateX(10px);
+}
+
+.romantic-list li::before {
+  content: '💖';
+  margin-right: 10px;
+}
+
+/* Sección final */
+.final-question {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  margin: 50px auto;
+  max-width: 800px;
+  box-shadow: 0 10px 30px rgba(209, 77, 114, 0.15);
+}
+
+#valentineQuestion {
+  font-size: 3.5em;
+  margin: 30px 0;
+  color: #ff6b6b;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Botones mejorados */
+.answerButton {
+  padding: 15px 40px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 15px;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.answerButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+  background: linear-gradient(45deg, #ff8e8e, #ff6b6b);
+}
+
+.extra-reason {
+  font-style: italic;
+  color: #ff6b6b;
+  margin-top: 20px;
+  font-size: 1.1em;
+}
+
+/* Efectos especiales */
+.hearts-background::after {
+  content: '💖';
+  position: absolute;
+  opacity: 0.1;
+  font-size: 80px;
+  pointer-events: none;
+}
