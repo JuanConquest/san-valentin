@@ -1,5 +1,4 @@
 body {
-  font-family: 'Comic Sans MS', cursive;
   background: linear-gradient(135deg, #fff5e4 0%, #ffe8f0 100%);
   color: #d14d72;
   line-height: 1.6;
@@ -121,4 +120,22 @@ h2 {
   opacity: 0.1;
   font-size: 80px;
   pointer-events: none;
+}
+@media (max-width: 800px) {
+  section {
+    padding: 40px 0px;
+    margin: 30px auto;
+    max-width: 1200px;
+    border-bottom: 2px dashed #ffabab;
+  }
+  .content-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+  }
+  .text-content{
+    text-align: center;
+    width: 80%;
+  }
 }
