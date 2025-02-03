@@ -7,7 +7,12 @@
   <link rel="stylesheet" href="css/valentine.css">
 </head>
 <body>
+
 <!-- Sección 1: Por qué eres la elegida -->
+<audio id="backgroundMusic" controls autoplay loop>
+  <source src="music.m4a" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
 <section class="hero-section">
   <div class="content-wrapper">
     <img src="cat.png" alt="Corazones entrelazados" class="section-img">
@@ -29,7 +34,7 @@
 
 <!-- Sección 2: 5 razones -->
 <section class="reasons-section">
-  <h2>❤️ 21 Razones (de 200) por las que eres la indicada ❤️</h2>
+  <h2>❤️ 30 Razones por las que eres la indicada ❤️</h2>
   <ol class="romantic-list">
     <li>1.Todo mi dia mejora solo con ver tu sonrisa</li>
     <li>2.Tienes el don de hacerlo todo mejor con tu presencia</li>
@@ -50,8 +55,18 @@
     <li>17.Eres muy tierna cuando te enojas, y mucho más cuando te averguenzas</li>
     <li>18.Si soy sincero contigo, me gustaría abrazarte cada vez que te veo</li>
     <li>19.Cada que pienso en hacer algo, eres la primera persona a la cual quiero incluir</li>
-    <li>20.Quiero que sepas que si en algún momento algo te molesta, necesitas alguien para hablar, o necesitas algo. Puedes recurrir a mi</li>
-    <li>21.Eres la chica más hermosa que conozco</li>
+    <li>20.Si en algún momento algo te molesta, necesitas alguien para hablar, o necesitas algo. Puedes recurrir a mi</li>
+    <li>21.Cada que estoy haciendo algo, siempre me pongo a pensar como sería si estuvieras ahi conmigo</li>
+    <li>22.Gracias a ti, descubri fascetas de mi que no conocia</li>
+    <li>23.Eres la primera a la que le regale algo</li>
+    <li>24.Eres la primera a la que le hice algo (Intentaré mejorar) </li>
+    <li>25.Lo que hago por ti, no es para que me quieras, es para que sepas que te quiero</li>
+    <li>26.No hay un solo dia en el que no piense en ti</li>
+    <li>27.No importa cuántas veces hablemos, siempre quiero seguir escuchándote</li>
+    <li>28.Podría pasar horas mirándote sin aburrirme</li>
+    <li>29.No importa lo que pase, siempre estaré para apoyarte</li>
+    <li>30.Me encanta tu lunar que tienes en el cachete</li>
+    <li>31.Eres la chica más hermosa que conozco</li>
   </ol>
   <p class="extra-reason">¡Y podría escribir muchas razones más pero quiero decírtelas en persona cada día!</p>
 </section>
@@ -85,6 +100,31 @@
     var currentFontSize = parseInt(window.getComputedStyle(yesButton).fontSize);
     yesButton.style.fontSize = currentFontSize + 10 + "px";
   });
+
+  // Persistencia de la música entre páginas
+  const audio = document.getElementById('backgroundMusic');
+
+  // Guardar estado al salir de la página
+  window.addEventListener('beforeunload', () => {
+    localStorage.setItem('musicTime', audio.currentTime);
+    localStorage.setItem('musicPlaying', !audio.paused);
+  });
+
+  // Recuperar estado al cargar la página
+  window.addEventListener('load', () => {
+    const savedTime = localStorage.getItem('musicTime');
+    const isPlaying = localStorage.getItem('musicPlaying') === 'true';
+
+    if (savedTime !== null) {
+      audio.currentTime = savedTime;
+      if (isPlaying) {
+        audio.play().catch(() => {
+          // Manejar políticas de autoplay
+        });
+      }
+    }
+  });
 </script>
+
 </body>
 </html>
