@@ -114,13 +114,7 @@ h2 {
 }
 
 /* Efectos especiales */
-.hearts-background::after {
-  content: '💖';
-  position: absolute;
-  opacity: 0.1;
-  font-size: 80px;
-  pointer-events: none;
-}
+
 @media (max-width: 800px) {
   section {
     padding: 40px 0px;
