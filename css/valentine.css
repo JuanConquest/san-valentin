@@ -1,9 +1,25 @@
 body {
-  background: linear-gradient(135deg, #fff5e4 0%, #ffe8f0 100%);
+  background: linear-gradient(135deg, #ededff 0%, #ffcce1 80%);
   color: #d14d72;
   line-height: 1.6;
 }
-
+/* Estilos para la nueva sección inicial */
+.initial-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-image: url("/img.png");
+}
+.initial-section h1 {
+  font-size: 4em;
+  color: #d14d72;
+  text-shadow: 3px 3px 6px rgba(255, 171, 171, 0.5);
+  margin: 0;
+}
+#backgroundMusic{
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
 /* Secciones generales */
 section {
   padding: 40px 20px;
@@ -129,6 +145,241 @@ h2 {
     text-align: center;
   }
   .text-content{
+    text-align: center;
+    width: 80%;
+  }
+}
+/* ====================
+   Animaciones Generales
+   ==================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ====================
+   Estilo Global
+   ==================== */
+body {
+  color: #d14d72;
+  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ====================
+   Sección de Introducción
+   ==================== */
+.intro-section {
+  text-align: center;
+  padding: 40px 20px;
+  margin: 30px auto;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(209, 77, 114, 0.2);
+  animation: fadeInDown 1s ease-out;
+}
+
+.intro-section h1 {
+  font-size: 4em;
+  font-family: 'Brush Script MT', cursive; /* Fuente decorativa */
+  color: #ff6b6b;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+
+/* ====================
+   Sección Hero (Por qué eres la elegida)
+   ==================== */
+.hero-section {
+  padding: 40px 20px;
+  margin: 30px auto;
+  max-width: 1200px;
+  border-bottom: 2px dashed #ffabab;
+  animation: fadeInUp 1s ease-out;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.section-img {
+  width: 45%;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(209, 77, 114, 0.2);
+  animation: zoomIn 1s ease-out;
+}
+
+.text-content {
+  width: 50%;
+  text-align: left;
+  animation: fadeInUp 1s ease-out;
+}
+
+h2 {
+  color: #d14d72;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(255, 171, 171, 0.3);
+}
+
+/* ====================
+   Sección de Razones y Listas Románticas
+   ==================== */
+.romantic-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2em;
+}
+
+.romantic-list li {
+  padding: 15px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.romantic-list li:hover {
+  transform: translateX(10px);
+  box-shadow: 0 6px 20px rgba(209, 77, 114, 0.4);
+}
+
+.romantic-list li::before {
+  content: '💖';
+  margin-right: 10px;
+}
+
+/* ====================
+   Sección de Señales
+   ==================== */
+.signals-section {
+  padding: 40px 20px;
+  margin: 30px auto;
+  max-width: 1200px;
+  border-bottom: 2px dashed #ffabab;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* ====================
+   Sección de la Gran Pregunta (Final)
+   ==================== */
+.final-question {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  margin: 50px auto;
+  max-width: 800px;
+  box-shadow: 0 10px 30px rgba(209, 77, 114, 0.2);
+  animation: fadeInUp 1s ease-out;
+}
+
+#valentineQuestion {
+  font-size: 3.5em;
+  margin: 30px 0;
+  color: #ff6b6b;
+  animation: pulse 2s infinite;
+}
+
+/* ====================
+   Botones
+   ==================== */
+.answerButton {
+  padding: 15px 40px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 15px;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.answerButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+  background: linear-gradient(45deg, #ff8e8e, #ff6b6b);
+}
+
+/* ====================
+   Imágenes y textos adicionales
+   ==================== */
+.gift-img {
+  width: 80px;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
+
+.reason-text {
+  display: none;
+  font-size: 1.2em;
+  transition: opacity 0.5s ease;
+}
+
+/* ====================
+   Media Queries (Responsive)
+   ==================== */
+@media (max-width: 800px) {
+  section {
+    padding: 40px 0px;
+    margin: 30px auto;
+    max-width: 1200px;
+    border-bottom: 2px dashed #ffabab;
+  }
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+  }
+  .text-content {
     text-align: center;
     width: 80%;
   }
