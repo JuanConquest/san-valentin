@@ -21,15 +21,22 @@
     <img src="cat.png" alt="Corazones entrelazados" class="section-img">
     <div class="text-content">
       <h2>¿Por qué eres la elegida?</h2>
-      <p>Querida Samy, te conozco desde hace ya mucho tiempo, sin embargo, estos ultimos años empecé a descubrir quien
-        eres, y que puedo decirte, quede fascinado, sé que tal vez no estoy ni cerca de conocerte al 100%, pero cada
-        cosa nueva que aprendo de ti, hace que quiera saber de ti aún más</p>
-      <p>Que puedo decirte que, solo tengo ojos para ti, no tienes idea de lo mucho que me importas. Hiciste que por primera vez realmente quiera pasar este 14 con alguien, y ese alguien quiero que seas TÚ.</p>
+      <p>Bueno por donde empiezo...</p>
+      <p>Desde que te conocí no fuiste nada ni nadie importante para mí, solo eras mi compañera de clase y una amiga de hace tiempo... Paso el tiempo
+      y de la nada puummm estos últimos años lograste meterte en mi mente y corazón. No sabes cuanto disfrutaba hablar contigo, conocerte cada vez más
+      y con cada nuevo detalle que aprendía de tí, simplemente quería saber más. Y entonces sin darme cuenta te tenía en mis pensamientos y en mí sueños,
+      y entonces lo supe, que estaba enamorado de ti, de una manera tan simple entraste de repente en mi mundo</p>
+      <p>Eres muy importante para mí, aunque no te lo diga muy seguido, y solamente te decía dos palabras que simplificaban los miles de
+      sentimientos por ti "Te quiero"</p>
+      <p>Sé que no soy el chico que esperabas, pero quiero ser algo más en tu vida, algo más que un instante, quiero ser un recuerdo constante,
+      quiero que me dejes quererte como nunca nadie te ha querido, quiero ser algo más para ti</p>
+      <p>Que más puedo decirte, solo tengo ojos para ti, no tienes idea de lo mucho que me importas. Hiciste que por primera vez realmente quiera pasar este 14 con alguien, y ese alguien quiero que seas TÚ.</p>
     </div>
   </div>
 </section>
 <section class="reasons-section">
   <h2>❤️ 35 Razones por las que eres la indicada ❤️</h2>
+  <h3>Presiona los corazones para revelar su contenido :D</h3>
   <ol class="romantic-list">
     <li onclick="revealReason(this)"><img src="gift.png" alt="Sorpresa" class="gift-img"><span class="reason-text">1. Todo mi dia mejora solo con ver tu sonrisa</span></li>
     <li onclick="revealReason(this)"><img src="gift.png" alt="Sorpresa" class="gift-img"><span class="reason-text">2. Tienes el don de hacerlo todo mejor con tu presencia</span></li>
@@ -86,7 +93,7 @@
   <div class="hearts-background">
     <h2>Después de toda esta evidencia...</h2>
     <div id="valentineQuestion">¿ACEPTARÍAS SER MI SAN VALENTÍN? 💌</div>
-    <button class="answerButton" onclick="location.href='thankyou.html'">¡Sí, me gustaría!</button>
+    <button class="answerButton" onclick="location.href='lastpage.html'">¡Sí, me gustaría!</button>
     <button class="answerButton" id="noButton">Necesito más razones 😉</button>
   </div>
 </section>
@@ -94,7 +101,7 @@
 <script>
   // Mismo script original para el botón "No"
   document.getElementById('noButton').addEventListener('click', function() {
-    var yesButton = document.querySelector('button[onclick*="thankyou.html"]');
+    var yesButton = document.querySelector('button[onclick*="lastpage.html"]');
     var currentFontSize = parseInt(window.getComputedStyle(yesButton).fontSize);
     yesButton.style.fontSize = currentFontSize + 10 + "px";
   });
@@ -123,7 +130,7 @@
     }
   });
   document.getElementById('noButton').addEventListener('click', function() {
-    var yesButton = document.querySelector('button[onclick*="thankyou.html"]');
+    var yesButton = document.querySelector('button[onclick*="lastpage.html"]');
     var currentFontSize = parseInt(window.getComputedStyle(yesButton).fontSize);
     yesButton.style.fontSize = currentFontSize + 10 + "px";
   });
